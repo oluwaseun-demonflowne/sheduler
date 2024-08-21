@@ -11,8 +11,8 @@ const PORT = 5000;
 
 app.use("/sendemail", router);
 
-
-cron.schedule("0 8 * * *", async () => {
+// cron.schedule("0 8 * * *", async () => {
+cron.schedule("* * * * *", async () => {
   console.log("function running at 8:00 AM", new Date().toString());
   try {
     // Make a GET request to the /sendemail route
