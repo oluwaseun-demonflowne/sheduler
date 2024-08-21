@@ -16,7 +16,9 @@ cron.schedule("* * * * *", async () => {
   console.log("function running at 8:00 AM", new Date().toString());
   try {
     // Make a GET request to the /sendemail route
-    const response = await axios.get(`http://localhost:${PORT}/sendemail`);
+    const response = await axios.get(
+      `https://sheduler-qqhc.onrender.com/sendemail`
+    );
     console.log("Email sent:", response.data);
   } catch (error) {
     console.error("Error calling /sendemail route:", error);
